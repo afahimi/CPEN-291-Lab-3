@@ -1,300 +1,261 @@
-/* 
-Group number:
-Student Names:
-*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 100%;
-    line-height: 1.3;
-}
+html {
+  scroll-behavior: smooth; /* Add a smooth scrolling effect */
+  scroll-padding-top: 200px; /* Add some space between the navbar and the content */
+ }
+ 
+ .navbar {
+   background-color: #B6EADA; /* Blue background */
+   overflow: hidden; /* Hide scrollbars */
+   position: fixed; /* Set the navbar to fixed position */
+   top: 0; /* Position the navbar at the top of the page */
+   width: 100%; /* Full width */
+   height: 145px; /* Set a specific height */
+   display: flex; /* Use Flexbox display */
+   font-size: 20px; /* Increase font size */
+   padding-left: 30px; /* Add some padding */
+   font-family: "DM Sans", sans-serif; /* Change font family */
+   z-index: 100; /* Make sure the navbar stays on top of the content */
+ }
+ 
+/* Links inside the navbar */
+ .navbar a {
+   float: right; /* Float the links to the right */
+   margin-top: auto; /* Align the links vertically */
+   margin-left: 20px;  /* Add some space between the links */
+   display: block; /* Display the links as blocks */
+   color: #404258; /* Grey text color */
+   text-align: center; /* Center the links */
+   padding: 14px 16px; /* Add some padding */
+   text-decoration: none; /* Remove underline from links */
+ }
 
-.section-header {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  font-weight: 700;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
+ .navbar p {
+   float: right; /* Float the paragraph to the right */
+   margin-top: auto; /* Align the paragraph vertically */
+   margin-left: 20px; /* Add some space between the paragraph and other content*/
+   display: block; /* Display the paragraph as a block */
+   color: #404258; /* Grey text color */
+   text-align: center; /* Center the paragraph */
+ }
 
-.section-subheader {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 50px;
-}
+ .link-container {
+   display: flex; /* Use Flexbox display */
+   flex-direction: row; /* Align the links horizontally */
+   justify-content: center; /* Center the links horizontally */
+   align-items: center; /* Center the links vertically */
+   margin-top: 20px; /* Add some space between the links and the navbar */
+ }
+ 
+ /* make a block for the title and links to float them to the right */
+ .nav-title {
+   display: flex; /* Use Flexbox display */
+   float: right; /* Float the title to the right */
+   margin-left: auto; /* Align the title to the right */
+   flex-direction: column; /* Align the title vertically */
+ }
+ 
+/* Change background on mouse-over */
+ .navbar a:hover {
+   color: #6B728E; /* Dark grey text color */
+ }
 
+ .title {
+   margin-left: auto; /* Align the title to the right */
+   margin-right: 50px; /* Add some space between the title and other content*/
+   font-size: 48px; /* Increase font size */
+   font-weight: bold; /* Make the text bold */
+   color: #B6EADA; /* Blue text color */
+   text-align: center; /* Center the title */
+ }
 
-.test-text {
-  font-family: 'Roboto', sans-serif;
-  color: #000000;
-}
+ .title a:hover {
+   background: #B6EADA; /* Green background */
+   color: #404258; /* Grey text color */
+ }
 
-.blue-box .test-text {
-  text-align: left;
-}
+ .profile-image {
+   width: 100px; /* Set the width to 100px */
+   height: 100px; /* Set the height to 100px */
+   border-radius: 50%; /* Make the image a circle */
+   margin-top: 20px; /* Add some space between the image and the navbar */
+   margin-bottom: 20px; /* Add some space between the image and the navbar */
+ }
 
-.header-top img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out;
-  margin-left: 20px;
-}
-
-.header-top img:hover {
-  width: 170px;
-  height: 170px;
-  transform: scale(1.2);
-}
-
-
-.header-right {
-    float: right;
-    margin-right: 20px;
-    margin-top: 20px;
-}
-
-.header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #aae0e7;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin: 20px;
-}
-header {
-    font-size: 48px;
-  }
-  
-  .rgb-text {
-    background: linear-gradient(to right, #00A8FF, #8f8f8f);
-    -webkit-background-clip: text;
-    font-family: Helvetica, Sans-Serif;
-    -webkit-text-fill-color: transparent;
-    transition: background 0.5s ease-in-out; /* Increased the duration to 0.5s */
-  }
-  
-  .rgb-text:hover {
-    background: linear-gradient(to left, #FFA07A, #FFEF5F);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-footer {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .footer-links a {
-    display: inline-block;
-    margin: 0 20px;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .footer-links a:hover {
-    transform: scale(1.2);
-  }
-  
-  .footer-links img {
-    width: 50%;
-    margin-left: auto;
-  }
-
+ .grow { 
+   transition: all .1s ease-in-out; /* Add a transition effect when the user hovers over the image */
+ }
    
+ .grow:hover { 
+   transform: scale(1.1); /* Make the image 1.1 times bigger when the user hovers over it */
+   filter: drop-shadow(0px 0px 2px #272b36); /* Add a shadow effect when the user hovers over the image */
+   cursor: pointer; /* Change the cursor to a pointer when the user hovers over the image */
+ }
 
-  .nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+ .grow:active {
+   transform: scale(1.05); /* Make the image 1.05 times bigger when the user clicks on it */
+   filter: drop-shadow(0px 0px 5px #272b36); /* Add a shadow effect when the user clicks on the image */
+ }
 
-  .blue-box {
-    background-color: #00A8FF;
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    padding-left: 300px;
-    padding-right: 300px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    margin: 40px;
-    flex-direction: column;
-    align-items: center;
-  }
+/* Main content */
+ .main {
+   margin-top: 100px; /* Add a top margin to avoid content overlay */
+   
+ }
 
-  .blue-box h1{
-    font-family: 'Poppins', sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-    text-align: left;
-    margin-top: 0;
-    margin-bottom: 30px;
-    color: #5F5F5F;
-    border-radius: 10px;
-    padding: 10px 20px;
-    background-color: #F5F5F5;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  }
+ body {
+   margin: 0px; /* Remove the default margin */
+   background: #404258; /* Grey background */
+   font-family: "DM Sans", sans-serif; /* Change font family */
+ }
 
-  .blue-box img {
-    margin-right: 20px;
-    width: 50%;
-  }
-  
-  .align-left {
-    float: left;
-    margin-right: 20px;
-  }
-  
-  .section-content {
-    background-color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
+ .box {
+   width: 45%; /* Set the width to 45% */
+   height: 100%; /* Set the height to 100% */
+   background-color: #B6EADA; /* Blue background */
+   display: flex; /* Use Flexbox display */
+   flex-direction: column; /* Align the content vertically */
+   align-items: center; /* Center the content horizontally */
+   justify-content: center; /* Center the content vertically */
+   color: rgb(235, 234, 232); /* White text color */
+   background: #474E68; /* Dark grey background */
+   border-radius: 40px; /* Make the corners rounded */
+   padding-left: 80px; /* Add some padding */
+   padding-right: 80px; /* Add some padding */
+   padding-top: 20px; /* Add some padding */
+   padding-bottom: 20px; /* Add some padding */
+   margin: 0 auto; /* Center the box horizontally */
+   margin-top: 60px; /* Add some space between the box and the navbar */
+   margin-bottom: 60px; /* Add some space between the box and the navbar */
+   filter: drop-shadow(0px 0px 2px #272b36); /* Add a shadow effect */
+ }
 
-  
+ .container {
+   display: flex; /* Use Flexbox display */
+   flex-direction: column; /* Align the content vertically */
+   align-items: center; /* Center the content horizontally */
+   justify-content: center; /* Center the content vertically */
+   margin-top: 100px; /* Add some space between the box and the navbar */
+ }
 
-  .giant-textbox {
-    width: 100%;
-    height: 500px;
-    background-color: yellow;
-    overflow: auto;
-  }
-  
-  .giant-textbox pre {
-    margin: 0;
-    padding: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: monospace;
-    white-space: pre-wrap;
-  }
+ .title-box {
+   font-size: 25px; /* Increase font size */
+   color:#B6EADA; /* Blue text color */
+   font-weight: bold; /* Make the text bold */
+   background: #6B728E; /* Dark grey background */
+   text-align: center; /* Center the title */
+   width: 80%; /* Set the width to 80% */
+   height: 50%; /* Set the height to 50% */
+   border-radius: 40px; /* Make the corners rounded */
+ }
 
+ .large-images {
+   height: 100%; /* Set the height to 100% */
+   width: 50%; /* Set the width to 50% */
+   padding-left: 15px; /* Add some padding */
+   padding-right: 15px; /* Add some padding */
+   border-radius: 50px; /* Make the corners rounded */
+   margin-bottom: 40px; /* Add some space between the images */
+   margin-top: 20px; /* Add some space between the images */
+   filter: drop-shadow(0px 0px 2px #272b36); /* Add a shadow effect */
+ }
+ 
+ .teacher-image {
+   width: 200px; /* Set the width to 200px */
+   height: 100%; /* Set the height to 100% */
+   margin-top: 30px; /* Add some space between the image and the content */
+   margin-bottom: 20px; /* Add some space between the image and the content */
+   margin-left: 50px; /* Add some space between the image and the content */
+   filter: drop-shadow(0px 0px 2px #272b36); /* Add a shadow effect */
+   border-radius: 20px; /* Make the corners rounded */
+ }
 
-  /* CSS */
-  .button-5 {
-    align-items: center;
-    background-clip: padding-box;
-    background-color: #0032fa;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    justify-content: center;
-    line-height: 1.25;
-    margin: 0;
-    min-height: 3rem;
-    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-    position: relative;
-    text-decoration: none;
-    transition: all 250ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    width: auto;
-  }
-  
-  .button-5:hover,
-  .button-5:focus {
-    background-color: #32ccfb;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  }
-  
-  .button-5:hover {
-    transform: translateY(-1px);
-  }
-  
-  .button-5:active {
-    background-color: #4d00c8;
-    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
-    transform: translateY(0);
-  }
+ .content-row-align {
+   display: flex; /* Use Flexbox display */
+   flex-direction: row; /* Align the content horizontally */
+   justify-content: center; /* Center the content horizontally */
+   align-items: center; /* Center the content vertically */
+ }
 
-  .site-footer {
-  background-color: #f8f8f8;
-  border-top: 1px solid #e7e7e7;
-  padding: 30px 0;
-}
+ .logo {
+   margin-top: 20px; /* Add some space between the image and the navbar */
+   margin-bottom: 20px; /* Add some space between the image and the navbar */
+   max-width: 100px; /* Set the max width to 100px */
+   height: auto; /* Set the height to auto */
+ }
 
-.site-footer .footer-info h4 {
-  color: #333333;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
+ .site-footer {
+   background-color: #B6EADA; /* Green background */
+   align-items: center; /* Center the content horizontally */
+   justify-content: center; /* Center the content vertically */
+   display: flex; /* Use Flexbox display */
+   flex-direction: column; /* Align the content vertically */
+ }
+ 
+ .site-footer .footer-info h4 {
+   color: #272b36; /* Dark grey text color */
+   font-size: 16px; /* Increase font size */
+   font-weight: bold; /* Make the text bold */
+   margin-bottom: 15px; /* Add some space between the footer title and links*/
+ }
+ 
+ .site-footer .footer-info p {
+   font-size: 14px; /* Increase font size */
+   line-height: 1.5; /* Increase line height */
+   margin-bottom: 0; /* Remove the default margin */
+ }
+ 
+ .site-footer .footer-links h4 {
+   color: #272b36; /* Dark grey text color */
+   font-size: 16px; /* Increase font size */
+   font-weight: bold; /* Make the text bold */
+   margin-top: 0; /* Remove the default margin */
+   margin-bottom: 15px; /* Add some space between the footer links and page bottom*/
+ }
+ 
+ .site-footer .footer-links ul {
+   display: flex; /* Use Flexbox display */
+   flex-direction: row; /* Align the content horizontally */
+   justify-content: space-between; /* Center the content horizontally */
+ }
+ 
+ .site-footer .footer-links ul li {
+   margin-bottom: 16px; /* Add some space between the footer links */
+   list-style: none; /* Remove the default list style */
+ 
+ }
+ 
+ .site-footer .footer-links ul li a {
+   color: #404258; /* Dark grey text color */
+   text-decoration: none; /* Remove the default text decoration */
+   font-size: 14px; /* Increase font size */
+   line-height: 1.5; /* Increase line height */
+ }
+ 
+ .site-footer .footer-links ul li a:hover {
+   color: #6B728E; /* Dark grey text color */
+ }
 
-.site-footer .footer-info p {
-  font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 0;
-}
+ .footer-links a {
+   display: inline-block; /* Make the element a block */
+   margin: 0 20px; /* Add some space between the footer links */
+   transition: transform 0.2s ease-in-out; /* Add a transition effect */
+ }
 
-.site-footer .footer-links h4 {
-  color: #333333;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
+ .footer-links img {
+   width: 100%; /* Set the width to 100% */
+   height: 100px; /* Set the height to 100px */
+   margin-left: auto; /* Center the image horizontally */
+   display: flex; /* Use Flexbox display */
+   justify-content: center; /* Center the content horizontally */
+   align-items: center; /* Center the content vertically */
+ }
 
-.site-footer .footer-links ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.site-footer .footer-links ul li {
-  margin-bottom: 16px;
-  list-style: none;
-
-}
-
-.site-footer .footer-links ul li a {
-  color: #777777;
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.site-footer .footer-links ul li a:hover {
-  color: #333333;
-}
-
-.logo {
-  max-width: 100px;
-  height: auto;
-}
-
-
-  
+ footer {
+   background-color: #474E68; /* Dark grey background */
+   padding: 20px; /* Add some padding */
+   width: 100%; /* Set the width to 100% */
+   text-align: center; /* Center the text */
+   box-sizing: border-box; /* Make sure the padding is included */
+   font-size: 14px; /* Increase font size */
+   color: #666; /* Light grey text color */
+ }
